@@ -2,6 +2,25 @@
 <html lang="ru" data-page-theme="light">
   <head>
     <meta charset="UTF-8" />
+    <meta name="color-scheme" content="only light" />
+    <meta name="supported-color-schemes" content="light" />
+    <meta name="theme-color" content="#f7fafd" />
+    <!-- MTS Tag: load once per document, independently of React renders. -->
+    <script>
+      (function (dl, id) {
+        window[dl] = window[dl] || [];
+        const script = document.createElement('script'),
+              params = dl !== 'dataLayer' ? '?l=' + dl : '';
+        script.async = true;
+        script.src = `https://tag.a.mts.ru/container/${id}/tag.js${params}`;
+        document.head.appendChild(script);
+      })('dataLayer', '01a1d4c3-ce22-7b29-a9ac-231f6708b11c');
+    </script>
+    <style>
+      /* Keep the first paint and native controls light, including portaled dialogs. */
+      :root { color-scheme: light; color-scheme: only light; background: #f7fafd; }
+      body { background: #f7fafd; }
+    </style>
     <script>
       // Disable restoration before the browser loads the page and its modules.
       if (!window.location.hash || window.location.hash === '#top') window.history.scrollRestoration = 'manual'
@@ -15,10 +34,10 @@
     <meta name="description" content="МТС Маркетолог 2.0 — единое технологическое ядро для рекламных каналов. Big Data МТС, Stable ID и общее управление рекламой." />
     <meta name="robots" content="noindex, nofollow" />
     <title>МТС Маркетолог 2.0 — единое ядро вашей рекламы</title>
-    <script type="module" crossorigin src="/marketer-2/assets/marketer2-DWngqjfp.js"></script>
+    <script type="module" crossorigin src="/marketer-2/assets/marketer2-DySKRmCv.js"></script>
     <link rel="modulepreload" crossorigin href="/marketer-2/assets/PlatformCoreMobile-CYnOkQRD.js">
     <link rel="stylesheet" crossorigin href="/marketer-2/assets/PlatformCoreMobile-oWv6OMk8.css">
-    <link rel="stylesheet" crossorigin href="/marketer-2/assets/marketer2-BPKqge6Q.css">
+    <link rel="stylesheet" crossorigin href="/marketer-2/assets/marketer2-DLL-TcgH.css">
   </head>
   <body>
     <div id="root"></div>
