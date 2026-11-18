@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="ru" data-page-theme="light">
+<html lang="ru" data-page-theme="light" data-marketer-boot="loading">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="only light" />
     <meta name="supported-color-schemes" content="light" />
     <meta name="theme-color" content="#f7fafd" />
@@ -16,11 +17,30 @@
         document.head.appendChild(script);
       })('dataLayer', '01a1d4c3-ce22-7b29-a9ac-231f6708b11c');
     </script>
-    <style>
-      /* Keep the first paint and native controls light, including portaled dialogs. */
-      :root { color-scheme: light; color-scheme: only light; background: #f7fafd; }
-      body { background: #f7fafd; }
-    </style>
+    <style>html[data-marketer-boot], html[data-marketer-boot] body { margin: 0; background: #f7fafd; color-scheme: light; }
+html[data-marketer-boot='loading'], html[data-marketer-boot='revealing'] { overflow: hidden; }
+html[data-marketer-boot='loading'] #root { visibility: hidden; }
+#page-load-status { position: fixed; inset: 0; box-sizing: border-box; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 24px; border: 0; outline: none; display: grid; place-items: center; background: #f7fafd; color: #141c28; font: 15px/1.5 system-ui, sans-serif; opacity: 1; transition: opacity 600ms ease; }
+#page-load-status[hidden] { display: none; }
+#page-load-status::backdrop { background: transparent; }
+#page-load-status[data-leaving] { opacity: 0; }
+.marketer-loader__orbit { position: relative; width: 116px; height: 116px; animation: marketer-loader-appear 400ms ease-out both; }
+.marketer-loader__ring { position: absolute; inset: 0; box-sizing: border-box; border: 1.5px solid transparent; border-top-color: #ff0032; border-right-color: rgb(255 0 50 / 48%); border-radius: 50%; box-shadow: 0 -3px 9px -4px rgb(255 0 50 / 45%); animation: marketer-loader-spin 2.8s linear infinite; }
+.marketer-loader__ring--inner { inset: 18px; border-top-color: #ff0032; border-right-color: rgb(255 0 50 / 20%); animation-direction: reverse; animation-duration: 1.9s; }
+.marketer-loader__message { position: absolute; top: calc(50% + 112px); left: 24px; right: 24px; text-align: center; }
+.marketer-loader__message[hidden] { display: none; }
+.marketer-loader__message p { max-width: 420px; margin: 0 auto 16px; }
+.marketer-loader__message button { padding: 12px 22px; border: 1px solid #ff0032; border-radius: 28px; background: #fff; color: #e0002b; font: inherit; cursor: pointer; }
+.marketer-loader__message button:focus-visible { outline: 2px solid #0070e5; outline-offset: 4px; }
+.marketer-loader__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#page-load-status[data-state='error'] .marketer-loader__orbit *, #page-load-status[data-paused] .marketer-loader__orbit * { animation-play-state: paused; }
+@keyframes marketer-loader-appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes marketer-loader-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  #page-load-status { transition: none; }
+  .marketer-loader__orbit, .marketer-loader__orbit * { animation: none; }
+}
+</style>
     <script>
       // Disable restoration before the browser loads the page and its modules.
       if (!window.location.hash || window.location.hash === '#top') window.history.scrollRestoration = 'manual'
@@ -30,16 +50,128 @@
     <link rel="preload" as="image" type="image/webp" href="/marketer-2/assets/desktop@2x-DKSeo8Ft.webp" media="(min-width: 600px)" fetchpriority="high" />
     <link rel="preload" as="font" type="font/woff2" href="/marketer-2/assets/MTSText-Regular-CcF3t-dw.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/marketer-2/assets/MTSWide-Medium-Bh8gfG4Z.woff2" crossorigin />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="font" type="font/woff2" href="/marketer-2/assets/MTSWide-Regular-DFh00ULt.woff2" crossorigin />
     <meta name="description" content="МТС Маркетолог 2.0 — единое технологическое ядро для рекламных каналов. Big Data МТС, Stable ID и общее управление рекламой." />
     <meta name="robots" content="noindex, nofollow" />
     <title>МТС Маркетолог 2.0 — единое ядро вашей рекламы</title>
-    <script type="module" crossorigin src="/marketer-2/assets/marketer2-DySKRmCv.js"></script>
-    <link rel="modulepreload" crossorigin href="/marketer-2/assets/PlatformCoreMobile-CYnOkQRD.js">
-    <link rel="stylesheet" crossorigin href="/marketer-2/assets/PlatformCoreMobile-oWv6OMk8.css">
-    <link rel="stylesheet" crossorigin href="/marketer-2/assets/marketer2-DLL-TcgH.css">
-  </head>
+    <script type="module" crossorigin src="/marketer-2/assets/marketer2-DozJEUoc.js"></script>
+    <link rel="modulepreload" crossorigin href="/marketer-2/assets/jsx-runtime-KJkY8l8U.js">
+    <link rel="modulepreload" crossorigin href="/marketer-2/assets/PlatformCoreMobile-CIP6Z7NH.js">
+    <link rel="preload" as="style" href="/marketer-2/assets/PlatformCoreMobile-sp6eEJum.css"><link rel="stylesheet" crossorigin href="/marketer-2/assets/PlatformCoreMobile-sp6eEJum.css" data-marketer-style media="print" onload="this.media='all';window.dispatchEvent(new Event('marketer:styles-ready'))" onerror="this.dataset.failed='true'">
+    <link rel="preload" as="style" href="/marketer-2/assets/marketer2-BLXJDKJF.css"><link rel="stylesheet" crossorigin href="/marketer-2/assets/marketer2-BLXJDKJF.css" data-marketer-style media="print" onload="this.media='all';window.dispatchEvent(new Event('marketer:styles-ready'))" onerror="this.dataset.failed='true'">
+    <link rel="preload" as="style" href="/marketer-2/assets/ActionButton-BxkKosHW.css"><link rel="stylesheet" crossorigin href="/marketer-2/assets/ActionButton-BxkKosHW.css" data-marketer-style media="print" onload="this.media='all';window.dispatchEvent(new Event('marketer:styles-ready'))" onerror="this.dataset.failed='true'">
+  <script type="application/json" id="marketer-chunk-recovery">{"LeadDialogContent":["/marketer-2/assets/LeadDialogContent-y2eV5R-p.js","/marketer-2/assets/LeadDialogContent-CIKp9CYb.css","/marketer-2/assets/ActionButton-BxkKosHW.css","/marketer-2/assets/jsx-runtime-KJkY8l8U.js","/marketer-2/assets/PlatformCoreMobile-CIP6Z7NH.js","/marketer-2/assets/PlatformCoreMobile-sp6eEJum.css","/marketer-2/assets/MarketerForm-BzkmVtcR.js","/marketer-2/assets/MarketerForm-DTAR8JKi.css","/marketer-2/assets/gsap-Bi_c5vh2.js","/marketer-2/assets/MarketerConsent-BS8tlFGp.js","/marketer-2/assets/MarketerConsent-CqICr87M.css"],"PlatformAudienceSection":["/marketer-2/assets/PlatformAudienceSection-B22GfNUF.js","/marketer-2/assets/PlatformAudienceSection-C45vsHbV.css","/marketer-2/assets/jsx-runtime-KJkY8l8U.js","/marketer-2/assets/PlatformCoreMobile-CIP6Z7NH.js","/marketer-2/assets/PlatformCoreMobile-sp6eEJum.css","/marketer-2/assets/gsap-Bi_c5vh2.js","/marketer-2/assets/portrait-20-TTcUKVGw.js","/marketer-2/assets/PlatformTooltip-DOPO8alf.js","/marketer-2/assets/PlatformTooltip-DlrT-JFz.css"],"PlatformCoreSections":["/marketer-2/assets/PlatformCoreSections-CugOxAlz.js","/marketer-2/assets/PlatformCoreSections-DWq42Mvp.css","/marketer-2/assets/jsx-runtime-KJkY8l8U.js","/marketer-2/assets/PlatformCoreMobile-CIP6Z7NH.js","/marketer-2/assets/PlatformCoreMobile-sp6eEJum.css","/marketer-2/assets/marketer2-DozJEUoc.js","/marketer-2/assets/marketer2-BLXJDKJF.css","/marketer-2/assets/ActionButton-BxkKosHW.css","/marketer-2/assets/PlatformCoreSections-Drjst0Sv.js","/marketer-2/assets/PlatformCoreSections-BHVbOBj9.css","/marketer-2/assets/mts-header-mark-CNXihOVz.js","/marketer-2/assets/MarketerForm-BzkmVtcR.js","/marketer-2/assets/MarketerForm-DTAR8JKi.css","/marketer-2/assets/gsap-Bi_c5vh2.js","/marketer-2/assets/MarketerConsent-BS8tlFGp.js","/marketer-2/assets/MarketerConsent-CqICr87M.css","/marketer-2/assets/PlatformTooltip-DOPO8alf.js","/marketer-2/assets/PlatformTooltip-DlrT-JFz.css"],"PlatformFooter":["/marketer-2/assets/PlatformFooter-CISTZiW6.js","/marketer-2/assets/PlatformFooter-3hGayWtj.css","/marketer-2/assets/jsx-runtime-KJkY8l8U.js","/marketer-2/assets/MarketerConsent-BS8tlFGp.js","/marketer-2/assets/MarketerConsent-CqICr87M.css","/marketer-2/assets/PlatformCoreMobile-CIP6Z7NH.js","/marketer-2/assets/PlatformCoreMobile-sp6eEJum.css"]}</script></head>
   <body>
+    <dialog id="page-load-status" aria-label="Загрузка Маркетолога 2.0" data-state="loading">
+  <span class="marketer-loader__sr" role="status">Загружаем страницу</span>
+  <div class="marketer-loader__orbit" aria-hidden="true">
+    <span class="marketer-loader__ring"></span>
+    <span class="marketer-loader__ring marketer-loader__ring--inner"></span>
+  </div>
+  <div class="marketer-loader__message" hidden>
+    <p role="status" id="page-load-message"></p>
+    <button type="button" id="page-load-retry">Повторить загрузку</button>
+  </div>
+</dialog>
+
     <div id="root"></div>
+    <script>// Inlined into the first HTML response: no React, external CSS, fonts or images.
+(() => {
+  const root = document.documentElement
+  const loader = document.getElementById('page-load-status')
+  const message = loader.querySelector('.marketer-loader__message')
+  const text = document.getElementById('page-load-message')
+  let finishing = false
+  let failed = false
+  let done = false
+  const startedAt = performance.now()
+  loader.showModal()
+  const showMessage = (error = false) => {
+    if (done) return
+    if (error) failed = true
+    loader.dataset.state = failed ? 'error' : 'waiting'
+    text.textContent = failed ? 'Не удалось загрузить страницу. Проверьте подключение и попробуйте ещё раз.' : 'Загрузка занимает больше времени. Можно подождать или попробовать ещё раз.'
+    message.hidden = false
+  }
+  const timer = setTimeout(() => showMessage(), 15000)
+  const onError = event => {
+    if ((event.target === window && event.error) || event.target.matches?.('script[type="module"], link[data-marketer-style]')) showMessage(true)
+  }
+  const onCancel = event => event.preventDefault()
+  const retry = () => location.reload()
+  const visibility = () => loader.toggleAttribute('data-paused', document.hidden)
+  window.addEventListener('error', onError, true)
+  loader.addEventListener('cancel', onCancel)
+  document.getElementById('page-load-retry').addEventListener('click', retry)
+  document.addEventListener('visibilitychange', visibility)
+  visibility()
+
+  const finish = () => {
+    if (done || finishing || failed || !document.querySelector('.platform-core-hero')) return
+    if (!document.querySelector('.platform-mobile-header, .platform-marketer-header')) return
+    const styles = [...document.querySelectorAll('link[data-marketer-style]')]
+    if (styles.some(link => link.dataset.failed)) { showMessage(true); return }
+    if (styles.some(link => !link.sheet || link.media !== 'all')) return
+    finishing = true
+    const images = [...document.querySelectorAll('.core-visual__poster img, .platform-mobile-header__logo, .platform-marketer-header .site-header__logo img')]
+    const fonts = document.fonts ? [
+      document.fonts.load('500 24px "MTS Wide"', 'Управляйте рекламой'),
+      document.fonts.load('400 16px "MTS Wide"', 'Увеличивайте точность'),
+      document.fonts.load('400 16px "MTS Text"', 'Подключить Маркетолог'),
+    ] : []
+    // An unavailable image must not trap the entire site; CorePoster owns its fallback.
+    Promise.allSettled([...fonts, ...images.map(image => image.decode())]).then(() => {
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        const beginReveal = () => {
+          if (failed || done) return
+          done = true
+          clearTimeout(timer)
+          observer.disconnect()
+          window.removeEventListener('error', onError, true)
+          window.removeEventListener('load', finish, true)
+          window.removeEventListener('marketer:styles-ready', finish)
+          loader.removeEventListener('cancel', onCancel)
+          document.removeEventListener('visibilitychange', visibility)
+          document.getElementById('page-load-retry').removeEventListener('click', retry)
+          // Paint the prepared hero underneath the modal before fading its cover.
+          // Keep interaction and optional 3D gated until the transition ends.
+          root.dataset.marketerBoot = 'revealing'
+          let closed = false
+          let fallback = 0
+          const close = () => {
+            if (closed) return
+            closed = true
+            clearTimeout(fallback)
+            loader.removeEventListener('transitionend', onTransitionEnd)
+            loader.close()
+            loader.hidden = true
+            root.dataset.marketerBoot = 'ready'
+            performance.mark('marketer:hero-visible')
+            window.dispatchEvent(new Event('marketer:hero-visible'))
+          }
+          const onTransitionEnd = event => {
+            if (event.target === loader && event.propertyName === 'opacity') close()
+          }
+          if (matchMedia('(prefers-reduced-motion: reduce)').matches) { close(); return }
+          loader.addEventListener('transitionend', onTransitionEnd)
+          loader.setAttribute('data-leaving', '')
+          fallback = setTimeout(close, 700)
+        }
+        // Avoid a flash on warm loads, without adding a hold to slow downloads.
+        const remaining = matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 0 : Math.max(0, 900 - (performance.now() - startedAt))
+        if (remaining) setTimeout(beginReveal, remaining)
+        else beginReveal()
+      }))
+    })
+  }
+  const observer = new MutationObserver(finish)
+  observer.observe(document.body, { childList: true, subtree: true })
+  window.addEventListener('load', finish, true)
+  window.addEventListener('marketer:styles-ready', finish)
+  finish()
+})()
+</script>
+    <noscript><style>#page-load-status{display:none}html[data-marketer-boot] #root{visibility:visible}</style><p>Для работы страницы включите JavaScript в настройках браузера и обновите её.</p></noscript>
   </body>
 </html>
